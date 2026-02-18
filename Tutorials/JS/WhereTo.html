@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorials - JS Where To</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../chatai.html" class="gif-link">
+        <img src="../../images/chatai.gif" alt="Klik untuk menuju link">
+      </a>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="../../index.html" class="logo">
+          <img src="../../images/logo.png" alt="Logo" />
+        </a>
+        <div class="search-bar-desktop">
+          <input type="text" placeholder="Search..." />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <button id="menuBtn" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-desktop">
+          <li class="menu-item"><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+          <li class="menu-item"><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+          <li class="menu-item"><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+          <li class="menu-item"><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          <li class="menu-item"><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="auth-buttons-desktop">
+          <button onclick="window.location.href='../../login.html'" >Log in</button>
+          <button onclick="window.location.href='../../signup.html'">Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="search-bar-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <ul>
+        <li><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+        <li><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+        <li><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+        <li><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+        <li><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons-mobile">
+        <button onclick="window.location.href='login.html'" >Log in</button>
+        <button onclick="window.location.href='signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li class="section-title"><i class="fas fa-book"></i><span>Getting Started</span></li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <ul>
+            <li><a href="../HTML/home.html">HTML Home</a></li>
+            <li><a href="../HTML/introduction.html">HTML Introduction</a></li>
+            <li><a href="../HTML/editors.html">HTML Editors</a></li>
+            <li><a href="../HTML/basic.html">HTML Basic</a></li>
+            <li><a href="../HTML/elements.html">HTML Elements</a></li>
+            <li><a href="../HTML/attributes.html">HTML Attributes</a></li>
+            <li><a href="../HTML/headings.html">HTML Headings</a></li>
+            <li><a href="../HTML/paragraphs.html">HTML Paragraphs</a></li>
+            <li><a href="../HTML/forms.html">HTML Forms</a></li>
+            <li><a href="../HTML/links.html">HTML Links</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <ul>
+            <li><a href="../CSS/home.html">CSS Home</a></li>
+            <li><a href="../CSS/introduction.html">CSS Introduction</a></li>
+            <li><a href="../CSS/syntax.html">CSS Syntax</a></li>
+            <li><a href="../CSS/howto.html">CSS How To</a></li>
+            <li><a href="../CSS/colors.html">CSS Colors</a></li>
+            <li><a href="../CSS/backgrounds.html">CSS Backgrounds</a></li>
+            <li><a href="../CSS/borders.html">CSS Borders</a></li>
+            <li><a href="../CSS/text.html">CSS Text</a></li>
+            <li><a href="../CSS/font.html">CSS Fonts</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <ul>
+            <li><a href="../JS/home.html">JS Home</a></li>
+            <li><a href="../JS/introduction.html">JS Introduction</a></li>
+            <li><a href="../JS/WhereTo.html" class="active">JS Where To</a></li>
+            <li><a href="../JS/output.html">JS Output</a></li>
+            <li><a href="../JS/statements.html">JS Statements</a></li>
+            <li><a href="../JS/variables.html">JS Variables</a></li>
+            <li><a href="../JS/datatypes.html">JS Data Types</a></li>
+            <li><a href="../JS/functions.html">JS Functions</a></li>
+            <li><a href="../JS/strings.html">JS Strings</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><span>Others Coming Soon</span></div>
+          <ul>
+            <li><a href="../ComingSoon/home.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Toggle button for sidebar -->
+  <button id="sidebarToggle">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- Main content -->
+  <div id="mainWrapper">
+    <div class="content-container">
+      <h1>JavaScript Where To</h1>
+      <div class="navigation-buttons">
+        <a href="#" class="btn-previous"><i class="fas fa-arrow-left"></i><span>Previous</span></a>
+        <a href="#" class="btn-next"><span>Next</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="try-it-yourself">
+        <h2>The &lt;script&gt; Tag</h2>
+        <p>In HTML, JavaScript code is embedded between the <strong>&lt;script&gt;</strong> and <strong>&lt;/script&gt;</strong> tags.</p>
+
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script&gt;
+    document.getElementById("demo").innerHTML = "My First JavaScript";
+&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Functions and Events</h2>
+        <p>A JavaScript <strong>function</strong> is a segment of code that executes when it is invoked.</p>
+        <p>For instance, a function may run in response to an <strong>event</strong>, such as when a user clicks a button.</p>
+        <br>
+        <h2>JavaScript in the &lt;head&gt; or &lt;body&gt;</h2>
+        <p>An HTML document can include as many scripts as desired.</p>
+        <p>Scripts can be embedded within the <strong>&lt;head&gt;</strong> section, the <strong>&lt;body&gt;</strong> section, or even in both.</p>
+        <br>
+        <h2>JavaScript in &lt;head&gt;</h2>
+        <p>This example shows a JavaScript <strong>function</strong> embedded in the <strong>&lt;head&gt;</strong>section of an HTML document.</p>
+        <p>The function is executed when a button is clicked:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Demo JavaScript in Head&lt;/h2&gt;
+
+&lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+&lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript in &lt;body&gt;</h2>
+        <p>In this example, a JavaScript <strong>function</strong>  is positioned within the <strong>&lt;body&gt;</strong> section of an HTML page.</p>
+        <p>The function is triggered when a button is clicked:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Demo JavaScript in Body&lt;/h2&gt;
+
+&lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+
+&lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;
+
+&lt;script&gt;
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>External JavaScript</h2>
+        <p>Scripts can also be placed in external files :</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code-area">
+              <pre id="exampleCode">
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+              </pre>
+              <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+            </div>  
+            <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+          <p>External scripts are useful when the same code is deployed across various web pages.</p>
+          <p>JavaScript files use the <strong>.js</strong> file extension.</p>
+          <p>To include an external script, specify the script file’s name in the src <strong>(source)</strong> attribute of a <strong>&lt;script&gt;</strong> tag:</p>
+          <div class="example">
+            <h3>Example</h3>
+            <div class="code-area">
+              <pre id="exampleCode">
+&lt;script src="myScript.js"&gt;&lt;/script&gt;
+              </pre>
+              <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+            </div>  
+            <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+          <p>You can include an external script reference in either the <strong>&lt;head&gt;</strong> or <strong>&lt;body&gt;</strong> section, based on your preference.</p>
+          <p>The script will function as if it were directly placed at the position of the <strong>&lt;script&gt;</strong> tag.</p>
+        <br>
+        <h2>External JavaScript Benefits</h2>
+        <p>Storing scripts in separate files offers several advantages :</p>
+        <ul>
+            <li><i class="fas fa-check-circle"></i><span>It decouples HTML from the JavaScript code.</span></li>
+            <li><i class="fas fa-check-circle"></i><span>It enhances the readability and maintainability of both HTML and JavaScript.</span></li>
+            <li><i class="fas fa-check-circle"></i><span>Cached external JavaScript files can improve page load performance.</span></li>
+        </ul>
+        <p>To include multiple script files on a single page, simply use several script tags :</p>
+        <br>
+        <h2>JavaScript Can Modify HTML Attribute Values</h2>
+        <p>In this example, JavaScript updates the <strong>src</strong> (source) attribute of an <strong>&lt;img&gt;</strong> tag.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="myScript1.js"&gt;&lt;/script&gt;
+&lt;script src="myScript2.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>External References</h2>
+        <p>There are three ways to reference an external script :</p>
+        <ul>
+            <li><i class="fas fa-check-circle"></i><span>By using a full URL (i.e., a complete web address)</span></li>
+            <li><i class="fas fa-check-circle"></i><span>By specifying a file path (such as /js/)</span></li>
+            <li><i class="fas fa-check-circle"></i><span>Without including any path</span></li>
+        </ul>
+        <p>This example utilizes a full URL to link to myScript.js:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>This example uses a file path to link to myScript.js:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="/js/myScript.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>This example uses no path to link to myScript.js:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="myScript.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

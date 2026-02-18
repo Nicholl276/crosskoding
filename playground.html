@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>crossKoding Playground</title>
+  <!-- Font Awesome untuk Ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.css">
+  <!-- CodeMirror Theme (Dracula) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/theme/dracula.min.css">
+  <style>
+    :root {
+      --page-bg: #f0f0f0;
+      --toolbar-bg: linear-gradient(90deg, #4b6cb7, #182848);
+      --toolbar-text: #fff;
+      --section-bg: #fff;
+      --console-bg: #1e1e1e;
+      --console-text: #fff;
+    }
+    body.dark-mode {
+      --page-bg: #121212;
+      --toolbar-bg: #333;
+      --toolbar-text: #fff;
+      --section-bg: #1e1e1e;
+      --console-bg: #1e1e1e;
+      --console-text: #fff;
+    }
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      background: var(--page-bg);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Toolbar */
+    .toolbar {
+      background: var(--toolbar-bg);
+      color: var(--toolbar-text);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .toolbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .toolbar .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .toolbar h1 {
+      font-size: 20px;
+    }
+    .toolbar .controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .toolbar .controls button {
+      background-color: #ffae00;
+      border: none;
+      color: #333;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .toolbar .controls button:hover {
+      background-color: #e69a00;
+    }
+    /* Main Layout: 2 Kolom */
+    .main-container {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+    .left-panel, .right-panel {
+      padding: 10px;
+      overflow: hidden;
+    }
+    .left-panel {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .editor-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: auto;
+    }
+    .editor-section h2 {
+      background: #f2f2f2;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin: 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .editor-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-panel {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .output-container {
+      flex: 0.6;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .output-container h2 {
+      background: #f2f2f2;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin: 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .output-container iframe {
+      width: 100%;
+      height: calc(100% - 30px);
+      border: none;
+      background-color: var(--section-bg);
+    }
+    .console-panel {
+      flex: 0.4;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .console-header {
+      background: #333;
+      color: #fff;
+      padding: 5px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .console-stats {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+    }
+    .console-stats .icon-counter {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .console-body {
+      flex: 1;
+      background: var(--console-bg);
+      color: var(--console-text);
+      padding: 10px;
+      overflow-y: auto;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+    .console-input {
+      background: #2e2e2e;
+      padding: 5px 10px;
+    }
+    .console-input input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #fff;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+    }
+    /* CodeMirror Styling */
+    .CodeMirror {
+      height: 100%;
+    }
+    .CodeMirror-scroll {
+      overflow-x: auto !important;
+      overflow-y: auto !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <h1>crossKoding Playground</h1>
+    </div>
+    <div class="controls">
+      <button onclick="runCode()"><i class="fas fa-play"></i> Run</button>
+      <button onclick="toggleTheme()"><i class="fas fa-adjust"></i> Toggle Theme</button>
+    </div>
+  </div>
+  
+  <!-- Main Container -->
+  <div class="main-container">
+    <!-- Left Panel: Code Editors -->
+    <div class="left-panel">
+      <!-- HTML Editor -->
+      <div class="editor-section">
+        <h2><i class="fab fa-html5"></i> HTML</h2>
+        <div class="editor-container">
+          <textarea id="html-input">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh HTML</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+          </textarea>
+        </div>
+      </div>
+      <!-- CSS Editor -->
+      <div class="editor-section">
+        <h2><i class="fab fa-css3-alt"></i> CSS</h2>
+        <div class="editor-container">
+          <textarea id="css-input">
+body {
+  background-color: #fafafa;
+  color: #333;
+}
+          </textarea>
+        </div>
+      </div>
+      <!-- JavaScript Editor -->
+      <div class="editor-section">
+        <h2><i class="fab fa-js"></i> JavaScript</h2>
+        <div class="editor-container">
+          <textarea id="js-input">
+console.log("Hello from JavaScript!");
+          </textarea>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Panel: Output & Console -->
+    <div class="right-panel">
+      <!-- Output -->
+      <div class="output-container">
+        <h2><i class="fas fa-desktop"></i> Output</h2>
+        <iframe id="output"></iframe>
+      </div>
+      <!-- Console -->
+      <div class="console-panel">
+        <div class="console-header">
+          <span><i class="fas fa-terminal"></i> Console</span>
+          <div class="console-stats">
+            <span class="icon-counter" id="warnCounter">
+              <i class="fas fa-exclamation-triangle"></i> <span>0</span>
+            </span>
+            <span class="icon-counter" id="errorCounter">
+              <i class="fas fa-times-circle"></i> <span>0</span>
+            </span>
+            <button onclick="clearConsole()"><i class="fas fa-trash-alt"></i> Clear</button>
+          </div>
+        </div>
+        <div class="console-body" id="consoleBody"></div>
+        <div class="console-input">
+          <input type="text" id="consoleInput" placeholder="Ketik perintah dan tekan Enter" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CodeMirror Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/javascript/javascript.min.js"></script>
+  <script>
+    // Inisialisasi CodeMirror untuk setiap editor
+    var htmlEditor = CodeMirror.fromTextArea(document.getElementById("html-input"), {
+      mode: "text/html",
+      lineNumbers: true,
+      theme: "dracula",
+      lineWrapping: false
+    });
+    var cssEditor = CodeMirror.fromTextArea(document.getElementById("css-input"), {
+      mode: "css",
+      lineNumbers: true,
+      theme: "dracula",
+      lineWrapping: false
+    });
+    var jsEditor = CodeMirror.fromTextArea(document.getElementById("js-input"), {
+      mode: "javascript",
+      lineNumbers: true,
+      theme: "dracula",
+      lineWrapping: false
+    });
+    
+    // Fungsi untuk menjalankan kode dari editor
+    function runCode() {
+      var htmlCode = htmlEditor.getValue();
+      var cssCode = "<style>" + cssEditor.getValue() + "</style>";
+      var jsCode = "<script>" + jsEditor.getValue() + "<\/script>";
+      var iframe = document.getElementById("output");
+      var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      
+      var overrideConsole = `
+        <script>
+          if (!window.__consoleOverridden) {
+            window.__consoleOverridden = true;
+            var oldLog = console.log;
+            var oldWarn = console.warn;
+            var oldError = console.error;
+            console.log = function(...args) {
+              parent.postMessage({ type: 'log', message: args.join(' ') }, '*');
+              oldLog.apply(console, args);
+            };
+            console.warn = function(...args) {
+              parent.postMessage({ type: 'warn', message: args.join(' ') }, '*');
+              oldWarn.apply(console, args);
+            };
+            console.error = function(...args) {
+              parent.postMessage({ type: 'error', message: args.join(' ') }, '*');
+              oldError.apply(console, args);
+            };
+          }
+        <\/script>
+      `;
+      
+      iframeDoc.open();
+      iframeDoc.write(overrideConsole + htmlCode + cssCode + jsCode);
+      iframeDoc.close();
+      
+      appendMessage("log", "playground run");
+    }
+    
+    // Fungsi menambahkan pesan ke console
+    function appendMessage(type, message) {
+      var consoleBody = document.getElementById("consoleBody");
+      var newMsg = document.createElement("div");
+      newMsg.textContent = (type === "input") ? "> " + message : "[" + type.toUpperCase() + "] " + message;
+      consoleBody.appendChild(newMsg);
+      consoleBody.scrollTop = consoleBody.scrollHeight;
+      
+      if (type === "warn") {
+        var warnCounter = document.getElementById("warnCounter").querySelector("span");
+        warnCounter.textContent = parseInt(warnCounter.textContent) + 1;
+      }
+      if (type === "error") {
+        var errorCounter = document.getElementById("errorCounter").querySelector("span");
+        errorCounter.textContent = parseInt(errorCounter.textContent) + 1;
+      }
+    }
+    
+    // Tangkap pesan dari iframe
+    window.addEventListener("message", function(event) {
+      if (event.source !== document.getElementById("output").contentWindow) return;
+      var data = event.data;
+      if (data && data.type && data.message) {
+        appendMessage(data.type, data.message);
+      }
+    });
+    
+    // Hapus isi console dan reset counter
+    function clearConsole() {
+      document.getElementById("consoleBody").innerHTML = "";
+      document.getElementById("warnCounter").querySelector("span").textContent = "0";
+      document.getElementById("errorCounter").querySelector("span").textContent = "0";
+    }
+    
+    // Toggle tema (dark/light)
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+    
+    // Input console interaktif
+    document.getElementById("consoleInput").addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        var command = this.value.trim();
+        if (command) {
+          appendMessage("input", command);
+          try {
+            var result = eval(command);
+            if (result !== undefined) {
+              appendMessage("log", result);
+            }
+          } catch (err) {
+            appendMessage("error", err);
+          }
+        }
+        this.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

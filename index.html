@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>crossKoding</title>
+  
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  />
+  
+  <!-- Font Awesome (untuk ikon) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <!-- File CSS utama -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- Gambar kupu-kupu -->
+  <img src="images/butterfly.gif" id="butterfly" alt="butterfly" />
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-flex">
+        <!-- Bagian kiri (Logo + Search Bar Desktop) -->
+        <div class="left-section">
+          <!-- Logo -->
+          <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Logo" class="logo-img" />
+          </a>
+
+          <!-- Search Bar (Desktop) -->
+          <div class="search-bar-desktop">
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              class="search-bar"
+            />
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bagian kanan (Menu + Auth) -->
+        <div class="right-section">
+          <!-- Tombol Hamburger (Mobile) -->
+          <button id="menuBtn" class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Menu Utama (Desktop) -->
+          <ul class="main-menu-desktop">
+            <li class="menu-item">
+              <i class="fas fa-book-open"></i>
+              <a href="tutorial.html">Tutorials</a>
+            </li>
+            <li class="menu-item">
+              <i class="fas fa-dumbbell"></i>
+              <a href="exercises.html">Exercises</a>
+            </li>
+            <li class="menu-item">
+              <i class="fas fa-tools"></i>
+              <a href="services.html">Services</a>
+            </li>
+            <li class="menu-item">
+              <i class="fas fa-users"></i>
+              <a href="https://discord.gg/rkw4wD5az5">Community</a>
+            </li>
+            <li class="menu-item">
+              <i class="fas fa-question-circle"></i>
+              <a href="#faq">FAQ</a>
+            </li>
+          </ul>
+
+          <!-- Auth Buttons (Desktop) -->
+          <div class="auth-desktop">
+            <button onclick="window.location.href='login.html'" class="btn-login">Log in</button>
+            <button onclick="window.location.href='signup.html'" class="btn-signup">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Mobile (Hidden by default) -->
+    <div id="mobileMenu" class="mobile-menu">
+      <!-- Search bar (Mobile) -->
+      <div class="mobile-search-wrapper">
+        <input 
+          type="text" 
+          placeholder="Search..." 
+          class="search-bar"
+        />
+        <button class="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <!-- Link Menu Mobile -->
+      <ul class="mobile-menu-links">
+        <li>
+          <i class="fas fa-book-open"></i>
+          <a href="tutorial.html">Tutorials</a>
+        </li>
+        <li>
+          <i class="fas fa-dumbbell"></i>
+          <a href="exercises.html">Exercises</a>
+        </li>
+        <li>
+          <i class="fas fa-tools"></i>
+          <a href="services.html">Services</a>
+        </li>
+        <li>
+          <i class="fas fa-users"></i>
+          <a href="https://discord.gg/rkw4wD5az5">Community</a>
+        </li>
+        <li>
+          <i class="fas fa-question-circle"></i>
+          <a href="#faq">FAQ</a>
+        </li>
+      </ul>
+
+      <!-- Auth Buttons (Mobile) -->
+      <div class="mobile-auth-buttons">
+        <button onclick="window.location.href='login.html'" class="btn-login-mobile">Log in</button>
+        <button onclick="window.location.href='signup.html'"class="btn-signup-mobile">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION HOME (Contoh) -->
+  <section id="home" class="home-section">
+    <div class="home-container">
+      <!-- Heading -->
+      <h1 class="home-title animate-on-scroll">
+        Share Your<br>Knowledge
+      </h1>
+      <!-- Subteks -->
+      <p class="home-subtitle animate-on-scroll">
+        "Coming together is a beginning, keeping together is progress, working together is success."
+        <br>
+        <span>- Henry Ford</span>
+      </p>
+      <!-- Ask Bar -->
+      <div class="ask-bar animate-on-scroll">
+        <div class="ask-bar-left">
+          <img src="images/logo.png" alt="K Icon" class="ask-bar-logo">
+          <input type="text" placeholder="Ask Your Question" class="ask-input">
+        </div>
+        <button onclick="window.location.href='chatai.html'" class="ask-button">
+          <svg 
+            class="ask-button-icon" 
+            fill="none" 
+            viewBox="0 0 12 12" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              d="M3.88129 4.535C4.15929 4.473 4.37629 4.256 4.43829 3.978L5.08729 1.055C5.25829 0.288999 6.34929 0.288999 6.51929 1.055L7.16929 3.978C7.23129 4.256 7.44829 4.473 7.72629 4.535L10.6493 5.184C11.4143 5.354 11.4143 6.446 10.6493 6.616L7.72629 7.265C7.44829 7.327 7.23129 7.544 7.16929 7.822L6.51929 10.745C6.34929 11.511 5.25829 11.511 5.08729 10.745L4.43829 7.822C4.37629 7.544 4.15929 7.327 3.88129 7.265L0.958289 6.616C0.192289 6.446 0.192289 5.354 0.958289 5.184L3.88129 4.535Z" 
+              fill="white"
+            />
+          </svg>
+          Start With AI
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION OTHERS (BARU) -->
+  <section id="others" class="others-section">
+    <!-- Kotak gradasi besar -->
+    <div class="others-gradient-box animate-on-scroll">
+      <!-- Teks di kiri atas -->
+      <div class="others-header">
+        <h2>Start With AI</h2>
+        <p>Kickstart your journey with AI-powered tools for web development and beyond.</p>
+        <!-- Lingkaran dengan ikon panah -->
+         <a href="chatai.html" class="others-circle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="others-circle-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+         </a>
+      </div>
+
+      <!-- Kartu putih mengambang -->
+      <div class="others-floating-card animate-on-scroll">
+        <div class="others-floating-card-header">
+          <img src="images/logo.png" alt="K Icon" class="others-floating-card-img" />
+          <button onclick="window.location.href='chatai.html'" class="others-floating-card-btn ">
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="others-floating-card-btn-icon">
+              <path d="M3.88129 4.535C4.15929 4.473 4.37629 4.256 4.43829 3.978L5.08729 1.055C5.25829 0.288999 6.34929 0.288999 6.51929 1.055L7.16929 3.978C7.23129 4.256 7.44829 4.473 7.72629 4.535L10.6493 5.184C11.4143 5.354 11.4143 6.446 10.6493 6.616L7.72629 7.265C7.44829 7.327 7.23129 7.544 7.16929 7.822L6.51929 10.745C6.34929 11.511 5.25829 11.511 5.08729 10.745L4.43829 7.822C4.37629 7.544 4.15929 7.327 3.88129 7.265L0.958289 6.616C0.192289 6.446 0.192289 5.354 0.958289 5.184L3.88129 4.535Z" 
+              fill="white"/>
+            </svg>
+            Start Now
+          </button>
+        </div>
+        <hr />
+        <p class="others-floating-card-text">
+          Build stunning websites with HTML, CSS, and JavaScript for your portfolio or blog.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid Cards -->
+    <div class="others-grid">
+      <!-- Card HTML -->
+      <div class="others-card card-html animate-on-scroll">
+        <div class="others-card-content">
+          <h3>HTML</h3>
+          <p>Structure your web content with this essential markup language.</p>
+          <button onclick="window.location.href='Tutorials/HTML/home.html'" class="font-html">Learn HTML</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/html.png" alt="HTML Icon" />
+        </div>
+      </div>
+
+      <!-- Card CSS -->
+      <div class="others-card card-css animate-on-scroll">
+        <div class="others-card-content">
+          <h3>CSS</h3>
+          <p>Style your websites with modern layouts and designs.</p>
+          <button class="font-css">Learn CSS</button>
+        </div>
+        <div onclick="window.location.href='Tutorials/CSS/home.html'" class="others-card-icon">
+          <img src="images/css.png" alt="CSS Icon" />
+        </div>
+      </div>
+
+      <!-- Card PHP -->
+      <div class="others-card card-php animate-on-scroll">
+        <div class="others-card-content">
+          <h3>PHP</h3>
+          <p>Create dynamic server-side web applications.</p>
+          <button onclick="window.location.href='Tutorials/ComingSoon/home.html'" class="font-php">Learn PHP</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/php.png" alt="PHP Icon" />
+        </div>
+      </div>
+
+      <!-- Card JavaScript -->
+      <div class="others-card card-js animate-on-scroll">
+        <div class="others-card-content">
+          <h3>JavaScript</h3>
+          <p>Add interactivity and dynamic features to your sites.</p>
+          <button onclick="window.location.href='Tutorials/JS/home.html'" class="font-js">Learn JS</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/javascript.png" alt="JS Icon" />
+        </div>
+      </div>
+
+      <!-- Card C++ -->
+      <div class="others-card card-cpp animate-on-scroll">
+        <div class="others-card-content">
+          <h3>C++</h3>
+          <p>Build high-performance software and games.</p>
+          <button onclick="window.location.href='Tutorials/ComingSoon/home.html'" class="font-cpp">Learn C++</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/c++.png" alt="C++ Icon" />
+        </div>
+      </div>
+
+      <!-- Card Python -->
+      <div class="others-card card-python animate-on-scroll">
+        <div class="others-card-content">
+          <h3>Python</h3>
+          <p>Versatile language for web, AI, and data science.</p>
+          <button onclick="window.location.href='Tutorials/ComingSoon/home.html'" class="font-python">Learn Python</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/python.png" alt="Python Icon" />
+        </div>
+      </div>
+
+      <!-- Card C -->
+      <div class="others-card card-c animate-on-scroll">
+        <div class="others-card-content">
+          <h3>C</h3>
+          <p>Efficient foundation for modern programming.</p>
+          <button onclick="window.location.href='Tutorials/ComingSoon/home.html'" class="font-c">Learn C</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/c.png" alt="C Icon" />
+        </div>
+      </div>
+
+      <!-- Card Java -->
+      <div class="others-card card-java animate-on-scroll">
+        <div class="others-card-content">
+          <h3>Java</h3>
+          <p>Robust language for Android and enterprise apps.</p>
+          <button onclick="window.location.href='Tutorials/ComingSoon/home.html'" class="font-java">Learn Java</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/java.png" alt="Java Icon" />
+        </div>
+      </div>
+
+      <!-- Card Kotlin -->
+      <div class="others-card card-kotlin animate-on-scroll">
+        <div class="others-card-content">
+          <h3>Kotlin</h3>
+          <p>Modern language for Android and multiplatform apps.</p>
+          <button onclick="window.location.href='Tutorials/ComingSoon/home.html'" class="font-kotlin">Learn Kotlin</button>
+        </div>
+        <div class="others-card-icon">
+          <img src="images/kotlin.png" alt="Kotlin Icon" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol "Selengkapnya" -->
+    <div class="others-button-wrap">
+      <button onclick="window.location.href='tutorial.html'" class="others-main-button">
+        <span>Selengkapnya</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="others-main-button-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- SECTION FAQ (BARU) -->
+  <section id="faq" class="faq-section">
+    <div class="faq-container animate-on-scroll">
+      <!-- Heading FAQ -->
+      <h2 class="faq-heading">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="faq-items">
+        <!-- FAQ 1 -->
+        <details class="faq-details animate-on-scroll">
+          <summary class="faq-summary">
+            <span>How does this platform help me if I'm not motivated to learn programming?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Our platform turns learning into a fun, engaging experience with interactive lessons, practical projects, 
+              and AI-driven guidance—perfect for sparking motivation even when you’re starting from zero.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="faq-details animate-on-scroll">
+          <summary class="faq-summary">
+            <span>Is everything really free? Do I need to pay to access the courses?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Yes, all core courses are 100% free! From beginner to expert content, you can dive in without spending a dime—because we believe in open access to education.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="faq-details animate-on-scroll">
+          <summary class="faq-summary">
+            <span>Are these lessons suitable for both beginners and experts?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Definitely! We offer tailored learning paths—from absolute basics to advanced topics—so everyone, from novices to pros, can grow at their own pace.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="faq-details animate-on-scroll">
+          <summary class="faq-summary">
+            <span>What makes this website’s interface so modern and appealing?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              Our sleek design blends cutting-edge UI/UX trends with smooth animations, vibrant colors, and intuitive navigation to make learning a visually delightful experience.
+            </p>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="faq-details animate-on-scroll">
+          <summary class="faq-summary">
+            <span>How does the AI feature assist in learning and planning my career path?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="faq-content">
+            <p>
+              The AI acts as your personal mentor, answering questions, offering tailored career roadmaps, and providing real-time code feedback to guide you from beginner to pro.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION FOOTER (BARU) -->
+  <section id="footer" class="footer-section">
+    <!-- Bagian atas: gradient modern -->
+    <div class="footer-top animate-on-scroll">
+      <div class="footer-top-inner">
+        <h1 class="footer-heading">
+          Start Your Dream<br>Journey Together
+        </h1>
+        <p class="footer-subtext">
+          Build your first website with HTML, CSS, and JavaScript
+        </p>
+
+        <!-- Ask Bar Footer -->
+        <div class="footer-ask-bar">
+          <div class="footer-ask-left">
+            <img src="images/logo.png" alt="K Icon" class="footer-ask-logo" />
+            <input type="text" placeholder="Ask Your Question" class="footer-ask-input" />
+          </div>
+          <button onclick="window.location.href='chatai.html'" class="footer-ask-button">
+            <svg class="footer-ask-button-icon" fill="none" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.88129 4.535C4.15929 4.473 4.37629 4.256 4.43829 3.978L5.08729 1.055C5.25829 0.288999 6.34929 0.288999 6.51929 1.055L7.16929 3.978C7.23129 4.256 7.44829 4.473 7.72629 4.535L10.6493 5.184C11.4143 5.354 11.4143 6.446 10.6493 6.616L7.72629 7.265C7.44829 7.327 7.23129 7.544 7.16929 7.822L6.51929 10.745C6.34929 11.511 5.25829 11.511 5.08729 10.745L4.43829 7.822C4.37629 7.544 4.15929 7.327 3.88129 7.265L0.958289 6.616C0.192289 6.446 0.192289 5.354 0.958289 5.184L3.88129 4.535Z" 
+              fill="white"/>
+            </svg>
+            Start With AI
+          </button>
+        </div>
+
+        <!-- Check Points -->
+        <div class="footer-check-points">
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Active Community
+          </div>
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Generative AI for Free
+          </div>
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            up to date material
+          </div>
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Learn Basic all Frameworks
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian bawah: Footer -->
+    <footer class="footer-bottom animate-on-scroll">
+      <div class="footer-columns">
+        <!-- Column: Company -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="tutorial.html">Tutorials</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Tutorials -->
+        <div class="footer-column">
+          <h3>Tutorials</h3>
+          <ul>
+            <li><a href="Tutorials/HTML/home.html">HTML</a></li>
+            <li><a href="Tutorials/CSS/home.html">CSS</a></li>
+            <li><a href="Tutorials/JS/home.html">JavaScript</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">PHP</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">C++</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">Python</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">C</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">C#</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Product -->
+        <div class="footer-column">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="chatai.html">Generative AI</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">Learn AI</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">Backend Path</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Resources -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="Tutorials/ComingSoon/home.html">UI/UX Interactive</a></li>
+            <li><a href="chatai.html">Generative AI</a></li>
+            <li><a href="tutorial.html">Free Learning</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Support -->
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="services.html">Updates</a></li>
+            <li><a href="services.html">Help</a></li>
+            <li><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+            <li><a href="services.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-text">
+        © 2025 crossKoding | All Rights Reserved
+      </div>
+    </footer>
+  </section>
+
+  <!-- File JS -->
+  <script src="index.js"></script>
+</body>
+</html>

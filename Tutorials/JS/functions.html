@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorials - JS Functions</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../chatai.html" class="gif-link">
+        <img src="../../images/chatai.gif" alt="Klik untuk menuju link">
+      </a>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="../../index.html" class="logo">
+          <img src="../../images/logo.png" alt="Logo" />
+        </a>
+        <div class="search-bar-desktop">
+          <input type="text" placeholder="Search..." />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <button id="menuBtn" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-desktop">
+          <li class="menu-item"><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+          <li class="menu-item"><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+          <li class="menu-item"><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+          <li class="menu-item"><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          <li class="menu-item"><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="auth-buttons-desktop">
+          <button onclick="window.location.href='../../login.html'" >Log in</button>
+          <button onclick="window.location.href='../../signup.html'">Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="search-bar-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <ul>
+        <li><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+        <li><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+        <li><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+        <li><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+        <li><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons-mobile">
+        <button onclick="window.location.href='login.html'" >Log in</button>
+        <button onclick="window.location.href='signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li class="section-title"><i class="fas fa-book"></i><span>Getting Started</span></li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <ul>
+            <li><a href="../HTML/home.html">HTML Home</a></li>
+            <li><a href="../HTML/introduction.html">HTML Introduction</a></li>
+            <li><a href="../HTML/editors.html">HTML Editors</a></li>
+            <li><a href="../HTML/basic.html">HTML Basic</a></li>
+            <li><a href="../HTML/elements.html">HTML Elements</a></li>
+            <li><a href="../HTML/attributes.html">HTML Attributes</a></li>
+            <li><a href="../HTML/headings.html">HTML Headings</a></li>
+            <li><a href="../HTML/paragraphs.html">HTML Paragraphs</a></li>
+            <li><a href="../HTML/forms.html">HTML Forms</a></li>
+            <li><a href="../HTML/links.html">HTML Links</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <ul>
+            <li><a href="../CSS/home.html">CSS Home</a></li>
+            <li><a href="../CSS/introduction.html">CSS Introduction</a></li>
+            <li><a href="../CSS/syntax.html">CSS Syntax</a></li>
+            <li><a href="../CSS/howto.html">CSS How To</a></li>
+            <li><a href="../CSS/colors.html">CSS Colors</a></li>
+            <li><a href="../CSS/backgrounds.html">CSS Backgrounds</a></li>
+            <li><a href="../CSS/borders.html">CSS Borders</a></li>
+            <li><a href="../CSS/text.html">CSS Text</a></li>
+            <li><a href="../CSS/font.html">CSS Fonts</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <ul>
+            <li><a href="../JS/home.html">JS Home</a></li>
+            <li><a href="../JS/introduction.html">JS Introduction</a></li>
+            <li><a href="../JS/WhereTo.html">JS Where To</a></li>
+            <li><a href="../JS/output.html">JS Output</a></li>
+            <li><a href="../JS/statements.html">JS Statements</a></li>
+            <li><a href="../JS/variables.html">JS Variables</a></li>
+            <li><a href="../JS/datatypes.html">JS Data Types</a></li>
+            <li><a href="../JS/functions.html" class="active">JS Functions</a></li>
+            <li><a href="../JS/strings.html">JS Strings</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><span>Others Coming Soon</span></div>
+          <ul>
+            <li><a href="../ComingSoon/home.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Toggle button for sidebar -->
+  <button id="sidebarToggle">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- Main content -->
+  <div id="mainWrapper">
+    <div class="content-container">
+      <h1>JavaScript Functions</h1>
+      <div class="navigation-buttons">
+        <a href="#" class="btn-previous"><i class="fas fa-arrow-left"></i><span>Previous</span></a>
+        <a href="#" class="btn-next"><span>Next</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="try-it-yourself">
+        <p>A JavaScript function is a segment of code crafted to perform a specific task.</p>
+        <p>It executes when something calls (or invokes) it.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+// Function to compute the product of p1 and p2
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Function Syntax</h2>
+        <p>A JavaScript function is declared using the function keyword, followed by a name and parentheses ().</p>
+        <p>Function names can include letters, digits, underscores, and dollar signs (following the same rules as variable names).</p>
+        <p>The parentheses may contain parameter names separated by commas, like so:
+          (parameter1, parameter2, ...)</p>
+        <p>The code that the function runs is enclosed within curly brackets {}.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>Function parameters are defined inside the parentheses in the function declaration, while function arguments are the actual values passed to the function when it is called.</p>
+        <p>Inside the function, these parameters behave as local variables.</p>
+        <br>
+        <h2>Function Invocation</h2>
+        <p>The function's code is executed when something triggers it, such as:</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i><span>When an event occurs (e.g., a user clicks a button)</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>When it's called from within other JavaScript code</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Automatically (self-invoked)</span></li>                
+        </ul>
+        <p>You'll learn more about how functions are invoked later in this tutorial.</p>
+        <br>
+        <h2>Function Return</h2>
+        <p>When JavaScript encounters a return statement, the function stops executing immediately.</p>
+        <p>If the function was called from a statement, control is returned to the code following that statement.</p>
+        <p>Functions typically compute a value, which is then returned to the caller.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <p>Calculate the product of two numbers, and return the result:</p>
+          <div class="code-area">
+            <pre id="exampleCode">
+// Function is called, the return value will end up in x
+let x = myFunction(4, 3);
+
+function myFunction(a, b) {
+// Function returns the product of a and b
+  return a * b;
+}
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>The () Operator</h2>
+        <p>The () operator is used to invoke (call) the function.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <p>Convert Fahrenheit to Celsius:</p>
+          <div class="code-area">
+            <pre id="exampleCode">
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+let value = toCelsius(77);
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>Providing incorrect parameters when calling a function might lead to an incorrect result, while accessing a function without using () returns the function itself rather than its output.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <p>Convert Fahrenheit to Celsius:</p>
+          <div class="code-area">
+            <pre id="exampleCode">
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+let value = toCelsius;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Functions as Variable Values</h2>
+        <p>Functions can be assigned to variables and used in expressions, assignments, and calculations just like any other variable.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <p>Instead of using a variable to store the return value of a function:</p>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = toCelsius(77);
+let text = "The temperature is " + x + " Celsius";
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>
+          <p>You can use the function directly, as a variable value:</p> 
+          <div class="code-area">
+            <pre id="exampleCode">
+let text = "The temperature is " + toCelsius(77) + " Celsius";
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Local Variables</h2>
+        <p>Variables declared within a JavaScript function are local to that function and can only be accessed from within it.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+// code here can NOT use carName
+
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>Since local variables are confined to their respective functions, the same name can be reused in different functions without conflict.</p>
+        <p>These local variables are created when the function starts and are removed once the function finishes executing.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

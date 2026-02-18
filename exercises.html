@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Our Skill</title>
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  />
+  <!-- Font Awesome (untuk ikon) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <!-- File CSS utama -->
+  <link rel="stylesheet" href="tutorial.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Logo" />
+        </a>
+        <div class="search-bar-desktop">
+          <input type="text" placeholder="Search..." />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <button id="menuBtn" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-desktop">
+          <li class="menu-item"><i class="fas fa-book-open"></i><a href="tutorial.html">Tutorials</a></li>
+          <li class="menu-item"><i class="fas fa-dumbbell"></i><a href="exercises.html">Exercises</a></li>
+          <li class="menu-item"><i class="fas fa-tools"></i><a href="services.html">Services</a></li>
+          <li class="menu-item"><i class="fas fa-users"></i><a href="#">Community</a></li>
+          <li class="menu-item"><i class="fas fa-question-circle"></i><a href="index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="auth-buttons-desktop">
+          <button onclick="window.location.href='login.html'">Log in</button>
+          <button onclick="window.location.href='signup.html'">Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="search-bar-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <ul>
+        <li><i class="fas fa-book-open"></i><a href="tutorial.html">Tutorials</a></li>
+        <li><i class="fas fa-dumbbell"></i><a href="exercises.html">Exercises</a></li>
+        <li><i class="fas fa-tools"></i><a href="services.html">Services</a></li>
+        <li><i class="fas fa-users"></i><a href="#">Community</a></li>
+        <li><i class="fas fa-question-circle"></i><a href="index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons-mobile">
+        <button onclick="window.location.href='login.html'" >Log in</button>
+        <button onclick="window.location.href='signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Heading -->
+      <div class="heading-wrapper fade-in">
+        <i class="fas fa-book heading-icon"></i>
+        <h1 class="heading-title">Lets Test Our Skill</h1>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper fade-in">
+        <div class="search-relative">
+          <i class="fas fa-search search-icon"></i>
+          <input 
+            type="text" 
+            placeholder="Search all Quiz Test" 
+            class="search-input"
+          />
+        </div>
+      </div>
+
+      <!-- HTML Section -->
+      <div class="tutorial-section fade-in">
+        <h2 class="section-title">
+          <i class="fab fa-html5 section-icon"></i> Quiz HTML
+        </h2>
+        <div class="grid-buttons">
+          <button onclick="window.location.href='Excercises/HTML/level1.html'" class="btn-gradient tutorial-btn">
+             Level 1
+          </button>
+          <button onclick="window.location.href='Excercises/HTML/level2.html'" class="btn-gradient tutorial-btn">
+             Level 2
+          </button>
+          <button onclick="window.location.href='Excercises/HTML/level3.html'" class="btn-gradient tutorial-btn">
+             Level 3
+          </button>
+          <button onclick="window.location.href='Excercises/HTML/level4.html'" class="btn-gradient tutorial-btn">
+             Level 4
+          </button>
+          <button onclick="window.location.href='Excercises/HTML/level5.html'" class="btn-gradient tutorial-btn">
+             Level 5
+          </button>
+          <button onclick="window.location.href='Excercises/HTML/level6.html'" class="btn-gradient tutorial-btn">
+             Level 6
+          </button>
+        </div>
+      </div>
+
+      <!-- CSS Section -->
+      <div class="tutorial-section fade-in">
+        <h2 class="section-title">
+          <i class="fab fa-css3-alt section-icon"></i> Quiz CSS
+        </h2>
+        <div class="grid-buttons">
+          <button onclick="window.location.href='Excercises/CSS/level1.html'" class="btn-gradient tutorial-btn">
+            Level 1
+         </button>
+         <button onclick="window.location.href='Excercises/CSS/level2.html'" class="btn-gradient tutorial-btn">
+            Level 2
+         </button>
+         <button onclick="window.location.href='Excercises/CSS/level3.html'" class="btn-gradient tutorial-btn">
+            Level 3
+         </button>
+         <button onclick="window.location.href='Excercises/CSS/level4.html'" class="btn-gradient tutorial-btn">
+            Level 4
+         </button>
+         <button onclick="window.location.href='Excercises/CSS/level5.html'" class="btn-gradient tutorial-btn">
+            Level 5
+         </button>
+         <button onclick="window.location.href='Excercises/CSS/level6.html'" class="btn-gradient tutorial-btn">
+            Level 6
+         </button>
+        </div>
+      </div>
+      <!-- JS Section -->
+      <div class="tutorial-section fade-in">
+        <h2 class="section-title">
+          <i class="fab fa-js-square section-icon"></i> Quiz JavaScript
+        </h2>
+        <div class="grid-buttons">
+          <button onclick="window.location.href='Excercises/JS/level1.html'" class="btn-gradient tutorial-btn">
+            Level 1
+         </button>
+         <button onclick="window.location.href='Excercises/JS/level2.html'" class="btn-gradient tutorial-btn">
+            Level 2
+         </button>
+         <button onclick="window.location.href='Excercises/JS/level3.html'" class="btn-gradient tutorial-btn">
+            Level 3
+         </button>
+         <button onclick="window.location.href='Excercises/JS/level4.html'" class="btn-gradient tutorial-btn">
+            Level 4
+         </button>
+         <button onclick="window.location.href='Excercises/JS/level5.html'" class="btn-gradient tutorial-btn">
+            Level 5
+         </button>
+         <button onclick="window.location.href='Excercises/JS/level6.html'" class="btn-gradient tutorial-btn">
+            Level 6
+         </button>
+        </div>
+      </div>
+                  <!-- Others Coming Soon Section -->
+                  <div class="tutorial-section fade-in">
+                    <h2 class="section-title2">
+                      <i class=""></i> Others Coming Soon
+                    </h2>
+                    
+                    </div>
+                  </div>
+    </div>
+  </main>
+  <!-- END MAIN CONTENT -->
+
+  <!-- FOOTER SECTION -->
+  <section id="footer">
+    <div class="footer-top">
+      <div class="footer-top-inner">
+        <h1 class="footer-heading animate-on-scroll">Start Your Dream<br>Journey Together</h1>
+        <p class="footer-subtext animate-on-scroll">
+          Build your first website with HTML, CSS, and JavaScript
+        </p>
+
+        <!-- Ask Bar -->
+        <div class="footer-ask-bar animate-on-scroll">
+          <div class="footer-ask-left">
+            <img src="images/logo.png" alt="K Icon" class="footer-ask-logo" />
+            <input type="text" placeholder="Ask Your Question" class="footer-ask-input" />
+          </div>
+          <button onclick="window.location.href='chatai.html'" class="footer-ask-button">
+            <svg class="footer-ask-button-icon" fill="none" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.88129 4.535C4.15929 4.473 4.37629 4.256 4.43829 3.978L5.08729 1.055C5.25829 0.288999 6.34929 0.288999 6.51929 1.055L7.16929 3.978C7.23129 4.256 7.44829 4.473 7.72629 4.535L10.6493 5.184C11.4143 5.354 11.4143 6.446 10.6493 6.616L7.72629 7.265C7.44829 7.327 7.23129 7.544 7.16929 7.822L6.51929 10.745C6.34929 11.511 5.25829 11.511 5.08729 10.745L4.43829 7.822C4.37629 7.544 4.15929 7.327 3.88129 7.265L0.958289 6.616C0.192289 6.446 0.192289 5.354 0.958289 5.184L3.88129 4.535Z" fill="white"/>
+            </svg>
+            Start With AI
+          </button>
+        </div>
+
+        <!-- Check Points -->
+        <div class="footer-check-points animate-on-scroll">
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Active Community
+          </div>
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Generative AI for Free
+          </div>
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            up to date material
+          </div>
+          <div class="footer-check-point">
+            <svg xmlns="http://www.w3.org/2000/svg" class="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Learn 8+ Frameworks
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <footer class="footer-bottom">
+      <div class="footer-bottom-grid animate-on-scroll">
+        <!-- Column: Company -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="tutorial.html">Tutorials</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Tutorials -->
+        <div class="footer-column">
+          <h3>Tutorials</h3>
+          <ul>
+            <li><a href="Tutorials/HTML/home.html">HTML</a></li>
+            <li><a href="Tutorials/CSS/home.html">CSS</a></li>
+            <li><a href="Tutorials/JS/home.html">JavaScript</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">PHP</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">C++</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">Python</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">C</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">C#</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Product -->
+        <div class="footer-column">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="chatai.html">Generative AI</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">Learn AI</a></li>
+            <li><a href="Tutorials/ComingSoon/home.html">Backend Path</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Resources -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="Tutorials/ComingSoon/home.html">UI/UX Interactive</a></li>
+            <li><a href="chatai.html">Generative AI</a></li>
+            <li><a href="tutorial.html">Free Learning</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Support -->
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="services.html">Updates</a></li>
+            <li><a href="services.html">Help</a></li>
+            <li><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+            <li><a href="services.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-text animate-on-scroll">
+        © 2025 crossKoding | All Rights Reserved
+      </div>
+    </footer>
+  </section>
+  <!-- END FOOTER SECTION -->
+
+  <!-- File JS -->
+  <script src="tutorial.js"></script>
+</body>
+</html>

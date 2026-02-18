@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat AI</title>
+  <!-- CDN Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Prism.js CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Link ke chatai.css -->
+  <link rel="stylesheet" href="chatai.css">
+</head>
+<body>
+  <!-- Logo di pojok kiri atas dengan href -->
+  <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="fixed-logo">
+  </a>
+
+  <!-- Ikon New Chat dan Hamburger di pojok kanan atas -->
+  <div class="fixed-controls">
+    <button id="new-chat" class="control-icon"><i class="fas fa-plus"></i> New Chat</button>
+    <div class="hamburger-menu">
+      <button id="hamburger-btn" class="control-icon"><i class="fas fa-bars"></i></button>
+      <div id="menu-dropdown" class="menu-dropdown">
+        <a href="tutorial.html">Tutorials</a>
+        <a href="exercises.html">Exercises</a>
+        <a href="services.html">Services</a>
+        <a href="https://discord.gg/rkw4wD5az5">Community</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Template-container berada di luar chat-container -->
+  <div id="template-container">
+    <img src="images/logo.png" alt="crossKoding AI Logo" class="logo">
+    <h1 class="greeting">Hi, I'm crossKoding AI</h1>
+    <p class="subtext">How can I help you today?</p>
+    <div class="template-boxes">
+      <div class="template-box" data-text="Roadmap menuju">
+        <i class="fas fa-map-signs"></i>
+        <p>Roadmap menuju</p>
+      </div>
+      <div class="template-box" data-text="Cara Memperbaiki">
+        <i class="fas fa-tools"></i>
+        <p>Cara Memperbaiki</p>
+      </div>
+      <div class="template-box" data-text="Apa itu">
+        <i class="fas fa-question-circle"></i>
+        <p>Apa itu</p>
+      </div>
+      <div class="template-box" data-text="Kenapa bisa">
+        <i class="fas fa-lightbulb"></i>
+        <p>Kenapa bisa</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="chat-container"></div>
+
+  <form id="chat-form">
+    <div class="input-wrapper">
+      <textarea id="inputText" placeholder="What do you want to know?" rows="1"></textarea>
+      <button type="submit" id="send-button"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </form>
+
+  <!-- CDN Marked.js untuk parsing markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Prism.js Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <!-- Link ke chatai.js -->
+  <script src="chatai.js"></script>
+</body>
+</html>

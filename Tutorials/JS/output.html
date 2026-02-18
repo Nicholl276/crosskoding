@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorials - JS Output</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../chatai.html" class="gif-link">
+        <img src="../../images/chatai.gif" alt="Klik untuk menuju link">
+      </a>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="../../index.html" class="logo">
+          <img src="../../images/logo.png" alt="Logo" />
+        </a>
+        <div class="search-bar-desktop">
+          <input type="text" placeholder="Search..." />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <button id="menuBtn" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-desktop">
+          <li class="menu-item"><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+          <li class="menu-item"><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+          <li class="menu-item"><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+          <li class="menu-item"><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          <li class="menu-item"><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="auth-buttons-desktop">
+          <button onclick="window.location.href='../../login.html'" >Log in</button>
+          <button onclick="window.location.href='../../signup.html'">Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="search-bar-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <ul>
+        <li><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+        <li><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+        <li><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+        <li><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+        <li><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons-mobile">
+        <button onclick="window.location.href='login.html'" >Log in</button>
+        <button onclick="window.location.href='signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li class="section-title"><i class="fas fa-book"></i><span>Getting Started</span></li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <ul>
+            <li><a href="../HTML/home.html">HTML Home</a></li>
+            <li><a href="../HTML/introduction.html">HTML Introduction</a></li>
+            <li><a href="../HTML/editors.html">HTML Editors</a></li>
+            <li><a href="../HTML/basic.html">HTML Basic</a></li>
+            <li><a href="../HTML/elements.html">HTML Elements</a></li>
+            <li><a href="../HTML/attributes.html">HTML Attributes</a></li>
+            <li><a href="../HTML/headings.html">HTML Headings</a></li>
+            <li><a href="../HTML/paragraphs.html">HTML Paragraphs</a></li>
+            <li><a href="../HTML/forms.html">HTML Forms</a></li>
+            <li><a href="../HTML/links.html">HTML Links</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <ul>
+            <li><a href="../CSS/home.html">CSS Home</a></li>
+            <li><a href="../CSS/introduction.html">CSS Introduction</a></li>
+            <li><a href="../CSS/syntax.html">CSS Syntax</a></li>
+            <li><a href="../CSS/howto.html">CSS How To</a></li>
+            <li><a href="../CSS/colors.html">CSS Colors</a></li>
+            <li><a href="../CSS/backgrounds.html">CSS Backgrounds</a></li>
+            <li><a href="../CSS/borders.html">CSS Borders</a></li>
+            <li><a href="../CSS/text.html">CSS Text</a></li>
+            <li><a href="../CSS/font.html">CSS Fonts</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <ul>
+            <li><a href="../JS/home.html">JS Home</a></li>
+            <li><a href="../JS/introduction.html">JS Introduction</a></li>
+            <li><a href="../JS/WhereTo.html" class="active">JS Where To</a></li>
+            <li><a href="../JS/output.html">JS Output</a></li>
+            <li><a href="../JS/statements.html">JS Statements</a></li>
+            <li><a href="../JS/variables.html">JS Variables</a></li>
+            <li><a href="../JS/datatypes.html">JS Data Types</a></li>
+            <li><a href="../JS/functions.html">JS Functions</a></li>
+            <li><a href="../JS/strings.html">JS Strings</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><span>Others Coming Soon</span></div>
+          <ul>
+            <li><a href="../ComingSoon/home.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Toggle button for sidebar -->
+  <button id="sidebarToggle">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- Main content -->
+  <div id="mainWrapper">
+    <div class="content-container">
+      <h1>JavaScript Output</h1>
+      <div class="navigation-buttons">
+        <a href="#" class="btn-previous"><i class="fas fa-arrow-left"></i><span>Previous</span></a>
+        <a href="#" class="btn-next"><span>Next</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="try-it-yourself">
+        <h2>JavaScript Display Options</h2>
+        <p>JavaScript can present data in various manners:</p>
+        <ul>
+            <li><i class="fas fa-check-circle"></i><span>By writing into an HTML element using <strong>innerHTML</strong> or <strong>innerText.</strong></span></li>
+            <li><i class="fas fa-check-circle"></i><span>By outputting directly to the HTML using <strong>document.write().</strong></span></li>
+            <li><i class="fas fa-check-circle"></i><span>By displaying data in an alert box through <strong>window.alert().</strong></span></li>
+            <li><i class="fas fa-check-circle"></i><span>By logging information in the browser console using <strong>console.log().</strong></span></li>
+        </ul>
+        <br>
+        <h2>Using innerHTML</h2>
+        <p>To access an HTML element, you can use the <strong>document.getElementById(id)</strong> method.</p>
+        <p>Assign an <strong>id</strong> attribute to the desired HTML element.</p>
+        <p>Then, modify the element's HTML content using the <strong>innerHTML</strong> property.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My First Paragraph&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo").innerHTML = "&lt;h2&gt;Hello World&lt;/h2&gt;";
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Using innerText</h2>
+        <p>To access an HTML element, use the <strong>document.getElementById(id)</strong> method. </p>
+        <p>Then use the <strong>innerText</strong> property to change the inner text of the HTML element:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My First Paragraph&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo").innerText = "Hello World";
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Using document.write()</h2>
+        <p>For testing purposes, it is convenient to use <strong>document.write():</strong></p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+document.write(5 + 6);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;button type="button" onclick="document.write(5 + 6)"&gt;Try it&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Using window.alert()</h2>
+        <p>You can use an alert box to display data :</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code-area">
+              <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+alert(5 + 6);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+              </pre>
+              <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+            </div>  
+            <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+          <br>
+          <p>You can skip the window keyword.</p>
+          <p>In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:</p>
+          <div class="example">
+            <h3>Example</h3>
+            <div class="code-area">
+              <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+alert(5 + 6);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+              </pre>
+              <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+            </div>  
+            <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+          <br>
+          <h2>Using console.log()</h2>
+          <p>For debugging purposes, you can call the console.log() method in the browser to display data.</p>
+          <div class="example">
+            <h3>Example</h3>
+            <div class="code-area">
+              <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;script&gt;
+console.log(5 + 6);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+              </pre>
+              <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+            </div>  
+            <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+        <br>
+        <h2>JavaScript Print</h2>
+        <p>JavaScript does not have any print object or print methods.</p>
+        <p>You cannot access output devices from JavaScript.</p>
+        <p>The only exception is that you can call the window.print() method in the browser to print the content of the current window.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code-area">
+              <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;button onclick="window.print()"&gt;Print this page&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+              </pre>
+              <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+            </div>  
+            <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+        <ul>
+            <li><i class="fas fa-check-circle"></i><span>It decouples HTML from the JavaScript code.</span></li>
+            <li><i class="fas fa-check-circle"></i><span>It enhances the readability and maintainability of both HTML and JavaScript.</span></li>
+            <li><i class="fas fa-check-circle"></i><span>Cached external JavaScript files can improve page load performance.</span></li>
+        </ul>
+        <p>To include multiple script files on a single page, simply use several script tags :</p>
+        <br>
+        <h2>JavaScript Can Modify HTML Attribute Values</h2>
+        <p>In this example, JavaScript updates the <strong>src</strong> (source) attribute of an <strong>&lt;img&gt;</strong> tag.</p>
+
+        <br>
+        <h2>External References</h2>
+        <p>There are three ways to reference an external script :</p>
+        <ul>
+            <li><i class="fas fa-check-circle"></i><span>By using a full URL (i.e., a complete web address)</span></li>
+            <li><i class="fas fa-check-circle"></i><span>By specifying a file path (such as /js/)</span></li>
+            <li><i class="fas fa-check-circle"></i><span>Without including any path</span></li>
+        </ul>
+        <p>This example utilizes a full URL to link to myScript.js:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>This example uses a file path to link to myScript.js:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="/js/myScript.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>This example uses no path to link to myScript.js:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;script src="myScript.js"&gt;&lt;/script&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

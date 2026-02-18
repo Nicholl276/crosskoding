@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorials - JS Introduction</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="../../chatai.html" class="gif-link">
+    <img src="../../images/chatai.gif" alt="Klik untuk menuju link">
+  </a>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="../../index.html" class="logo">
+          <img src="../../images/logo.png" alt="Logo" />
+        </a>
+        <div class="search-bar-desktop">
+          <input type="text" placeholder="Search..." />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <button id="menuBtn" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-desktop">
+          <li class="menu-item"><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+          <li class="menu-item"><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+          <li class="menu-item"><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+          <li class="menu-item"><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          <li class="menu-item"><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="auth-buttons-desktop">
+          <button onclick="window.location.href='../../login.html'" >Log in</button>
+          <button onclick="window.location.href='../../signup.html'">Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="search-bar-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <ul>
+        <li><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+        <li><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+        <li><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+        <li><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+        <li><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons-mobile">
+        <button onclick="window.location.href='login.html'" >Log in</button>
+        <button onclick="window.location.href='signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li class="section-title"><i class="fas fa-book"></i><span>Getting Started</span></li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <ul>
+            <li><a href="../HTML/home.html">HTML Home</a></li>
+            <li><a href="../HTML/introduction.html">HTML Introduction</a></li>
+            <li><a href="../HTML/editors.html">HTML Editors</a></li>
+            <li><a href="../HTML/basic.html">HTML Basic</a></li>
+            <li><a href="../HTML/elements.html">HTML Elements</a></li>
+            <li><a href="../HTML/attributes.html">HTML Attributes</a></li>
+            <li><a href="../HTML/headings.html">HTML Headings</a></li>
+            <li><a href="../HTML/paragraphs.html">HTML Paragraphs</a></li>
+            <li><a href="../HTML/forms.html">HTML Forms</a></li>
+            <li><a href="../HTML/links.html">HTML Links</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <ul>
+            <li><a href="../CSS/home.html">CSS Home</a></li>
+            <li><a href="../CSS/introduction.html">CSS Introduction</a></li>
+            <li><a href="../CSS/syntax.html">CSS Syntax</a></li>
+            <li><a href="../CSS/howto.html">CSS How To</a></li>
+            <li><a href="../CSS/colors.html">CSS Colors</a></li>
+            <li><a href="../CSS/backgrounds.html">CSS Backgrounds</a></li>
+            <li><a href="../CSS/borders.html">CSS Borders</a></li>
+            <li><a href="../CSS/text.html">CSS Text</a></li>
+            <li><a href="../CSS/font.html" class="active">CSS Fonts</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <ul>
+            <li><a href="../JS/home.html">JS Home</a></li>
+            <li><a href="../JS/introduction.html">JS Introduction</a></li>
+            <li><a href="../JS/WhereTo.html">JS Where To</a></li>
+            <li><a href="../JS/output.html">JS Output</a></li>
+            <li><a href="../JS/statements.html">JS Statements</a></li>
+            <li><a href="../JS/variables.html">JS Variables</a></li>
+            <li><a href="../JS/datatypes.html">JS Data Types</a></li>
+            <li><a href="../JS/functions.html">JS Functions</a></li>
+            <li><a href="../JS/strings.html">JS Strings</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><span>Others Coming Soon</span></div>
+          <ul>
+            <li><a href="../ComingSoon/home.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Toggle button for sidebar -->
+  <button id="sidebarToggle">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- Main content -->
+  <div id="mainWrapper">
+    <div class="content-container">
+      <h1>JavaScript Introduction</h1>
+      <div class="navigation-buttons">
+        <a href="#" class="btn-previous"><i class="fas fa-arrow-left"></i><span>Previous</span></a>
+        <a href="#" class="btn-next"><span>Next</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="try-it-yourself">
+        <h2>What exactly is JavaScript?</h2>
+        <p>JavaScript serves as the primary programming language for the web.</p>
+        <p>It is capable of modifying and transforming both HTML and CSS.</p>
+        <p>Additionally, it can compute, adjust, and verify data.</p>
+        <br>
+        <h2>Why Learn JavaScript?</h2>
+        <p>Every web developer must master three key languages:</p>
+        <ul>
+          <li><i class="fas fa-1"></i><span><strong>HTML</strong> to structure the content of web pages.</span></li>
+          <li><i class="fas fa-2"></i><span><strong>CSS</strong> to design and layout web pages.</span></li>
+          <li><i class="fas fa-3"></i><span><strong>JavaScript</strong> to control the interactive behavior of web pages.</span></li>
+        </ul>
+        <br>
+        <h2>JavaScript Can Modify HTML Content</h2>
+        <p>Among the various HTML methods available in JavaScript is <strong>getElementById().</strong></p>
+        <p>In the example below, an HTML element (with id="demo") is located, and its content (innerHTML) is updated to "Hello JavaScript":</p>
+
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+document.getElementById("demo").innerHTML = "Hello JavaScript"; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+document.getElementById('demo').innerHTML = 'Hello JavaScript'; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Can Modify HTML Attribute Values</h2>
+        <p>In this example, JavaScript updates the <strong>src</strong> (source) attribute of an <strong>&lt;img&gt;</strong> tag.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Hidupkan dan Matikan Lampu&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Contoh JavaScript: Hidupkan dan Matikan Lampu&lt;/h2&gt;
+    &lt;p&gt;JavaScript dapat mengubah nilai atribut HTML. Pada contoh ini, JavaScript mengubah nilai atribut &lt;code&gt;src&lt;/code&gt; dari sebuah gambar.&lt;/p&gt;
+
+    &lt;button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'"&gt;Hidupkan Lampu&lt;/button&gt;
+    
+    &lt;img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px" alt="Lampu"&gt;
+    
+    &lt;button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'"&gt;Matikan Lampu&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Can Alter HTML Styles (CSS)</h2>
+        <p>Modifying an HTML element's style is essentially a form of changing an HTML attribute.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+document.getElementById("demo").style.fontSize = "35px"; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Can Conceal HTML Elements</h2>
+        <p>You can hide HTML elements simply by modifying their <strong>display</strong> property.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+document.getElementById("demo").style.display = "none"; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Can Show HTML Elements</h2>
+        <p>You can show HTML elements simply by modifying their <strong>display</strong> property.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+document.getElementById("demo").style.display = "block"; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

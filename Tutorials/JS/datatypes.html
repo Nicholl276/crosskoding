@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorials - JS Data Types</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../../chatai.html" class="gif-link">
+        <img src="../../images/chatai.gif" alt="Klik untuk menuju link">
+      </a>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="../../index.html" class="logo">
+          <img src="../../images/logo.png" alt="Logo" />
+        </a>
+        <div class="search-bar-desktop">
+          <input type="text" placeholder="Search..." />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <button id="menuBtn" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-desktop">
+          <li class="menu-item"><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+          <li class="menu-item"><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+          <li class="menu-item"><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+          <li class="menu-item"><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+          <li class="menu-item"><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="auth-buttons-desktop">
+          <button onclick="window.location.href='../../login.html'" >Log in</button>
+          <button onclick="window.location.href='../../signup.html'">Sign up</button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="search-bar-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="button"><i class="fas fa-search"></i></button>
+      </div>
+      <ul>
+        <li><i class="fas fa-book-open"></i><a href="../../tutorial.html">Tutorials</a></li>
+        <li><i class="fas fa-dumbbell"></i><a href="../../exercises.html">Exercises</a></li>
+        <li><i class="fas fa-tools"></i><a href="../../services.html">Services</a></li>
+        <li><i class="fas fa-users"></i><a href="https://discord.gg/rkw4wD5az5">Community</a></li>
+        <li><i class="fas fa-question-circle"></i><a href="../../index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons-mobile">
+        <button onclick="window.location.href='login.html'" >Log in</button>
+        <button onclick="window.location.href='signup.html'">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li class="section-title"><i class="fas fa-book"></i><span>Getting Started</span></li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <ul>
+            <li><a href="../HTML/home.html">HTML Home</a></li>
+            <li><a href="../HTML/introduction.html">HTML Introduction</a></li>
+            <li><a href="../HTML/editors.html">HTML Editors</a></li>
+            <li><a href="../HTML/basic.html">HTML Basic</a></li>
+            <li><a href="../HTML/elements.html">HTML Elements</a></li>
+            <li><a href="../HTML/attributes.html">HTML Attributes</a></li>
+            <li><a href="../HTML/headings.html">HTML Headings</a></li>
+            <li><a href="../HTML/paragraphs.html">HTML Paragraphs</a></li>
+            <li><a href="../HTML/forms.html">HTML Forms</a></li>
+            <li><a href="../HTML/links.html">HTML Links</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <ul>
+            <li><a href="../CSS/home.html">CSS Home</a></li>
+            <li><a href="../CSS/introduction.html">CSS Introduction</a></li>
+            <li><a href="../CSS/syntax.html">CSS Syntax</a></li>
+            <li><a href="../CSS/howto.html">CSS How To</a></li>
+            <li><a href="../CSS/colors.html">CSS Colors</a></li>
+            <li><a href="../CSS/backgrounds.html">CSS Backgrounds</a></li>
+            <li><a href="../CSS/borders.html">CSS Borders</a></li>
+            <li><a href="../CSS/text.html">CSS Text</a></li>
+            <li><a href="../CSS/font.html">CSS Fonts</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+          <ul>
+            <li><a href="../JS/home.html">JS Home</a></li>
+            <li><a href="../JS/introduction.html">JS Introduction</a></li>
+            <li><a href="../JS/WhereTo.html">JS Where To</a></li>
+            <li><a href="../JS/output.html">JS Output</a></li>
+            <li><a href="../JS/statements.html">JS Statements</a></li>
+            <li><a href="../JS/variables.html">JS Variables</a></li>
+            <li><a href="../JS/datatypes.html" class="active">JS Data Types</a></li>
+            <li><a href="../JS/functions.html">JS Functions</a></li>
+            <li><a href="../JS/strings.html">JS Strings</a></li>
+          </ul>
+        </li>
+        <li class="group">
+          <div class="section-header"><span>Others Coming Soon</span></div>
+          <ul>
+            <li><a href="../ComingSoon/home.html">Coming Soon</a></li>
+          </ul>
+        </li>
+        <br>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Toggle button for sidebar -->
+  <button id="sidebarToggle">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- Main content -->
+  <div id="mainWrapper">
+    <div class="content-container">
+      <h1>JavaScript Data Types</h1>
+      <div class="navigation-buttons">
+        <a href="#" class="btn-previous"><i class="fas fa-arrow-left"></i><span>Previous</span></a>
+        <a href="#" class="btn-next"><span>Next</span><i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="try-it-yourself">
+        <h3>JavaScript supports 8 data types:</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i><span>String</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Number</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Bigint</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Boolean</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>undefined</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Null</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Symbol</span></li>          
+          <li><i class="fas fa-check-circle"></i><span>Object</span></li>          
+        </ul>
+        <h3>The Object Data Type</h3>
+        <p>The object data type can include both built-in objects and those defined by the user. Built-in types include objects, arrays, dates, maps, sets, integer arrays, float arrays, promises, and more.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+// Numbers:
+let length = 16;
+let weight = 7.5;
+
+// Strings:
+let color = "Yellow";
+let lastName = "Johnson";
+
+// Booleans
+let x = true;
+let y = false;
+
+// Object:
+const person = {firstName:"John", lastName:"Doe"};
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Date object:
+const date = new Date("2022-03-25"); 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Understanding Data Types</h2>
+        <p>Data types are a fundamental concept in programming.</p>
+        <p>To effectively work with variables, it's essential to understand their types.</p>
+        <p>Without them, a computer wouldn't be able to reliably compute operations such as:</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = 16 + "Volvo"; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>Does it make sense to add "Volvo" to sixteen? Would that trigger an error or yield a meaningful result?</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = "16" + "Volvo";  
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = 16 + "Volvo"; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = "Volvo" + 16; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>JavaScript processes such examples by evaluating expressions from left to right, meaning different sequences can yield different outcomes.</p>
+        <div class="example">
+          <h3>Javascript</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = 16 + 4 + "Volvo";
+// result 20Volvo
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <div class="example">
+          <h3>Javascript</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = "Volvo" + 16 + 4;
+// result Volvo164
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <p>In one case, JavaScript treats 16 and 4 as numbers until it encounters "Volvo." In another, because the first operand is a string, all subsequent operands are handled as strings.</p>
+        <br>
+        <h2>Dynamic Types in JavaScript</h2>
+        <p>JavaScript is dynamically typed, which means a single variable can hold values of different data types over its lifetime.</p>
+        <div class="example">
+          <h3>Javascript</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x;       // Now x is undefined
+x = 5;       // Now x is a Number
+x = "John";  // Now x is a String 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Strings</h2>
+        <p>A string, or text string, is a sequence of characters such as "John Doe."</p>
+        <p> Strings are defined by enclosing characters within single or double quotes.</p>
+      <div class="example">
+        <h3>Example</h3>
+        <div class="code-area">
+          <pre id="exampleCode">
+// Using double quotes:
+let carName1 = "Volvo XC60";
+
+// Using single quotes:
+let carName2 = 'Volvo XC60'; 
+          </pre>
+          <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+        </div>  
+        <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+      </div>
+        <br>
+        <p>You can also include quotes inside a string provided they differ from the ones that enclose the string.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+// Single quote inside double quotes:
+let answer1 = "It's alright";
+
+// Single quotes inside double quotes:
+let answer2 = "He is called 'Johnny'";
+
+// Double quotes inside single quotes:
+let answer3 = 'He is called "Johnny"';
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Numbers</h2>
+        <p>All numbers in JavaScript are stored as floating-point decimals.</p>
+        <p>They can be written with or without a decimal point.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+// With decimals:
+let x1 = 34.00;
+
+// Without decimals:
+let x2 = 34; 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Exponential Notation</h2>
+        <p>Numbers that are very large or very small can be represented using scientific (exponential) notation.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+ let y = 123e5;    // 12300000
+let z = 123e-5;   // 0.00123 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript BigInt</h2>
+        <p>While typical JavaScript numbers use a 64-bit floating-point format, BigInt is a newer data type (introduced in ES2020) that allows storage of integer values too large to be represented by standard JavaScript numbers.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+let x = BigInt("123456789012345678901234567890");
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>JavaScript Booleans</h2>
+        <p>Booleans can have only two values: true or false.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+ let x = 5;
+let y = 5;
+let z = 6;
+(x == y)       // Returns true
+(x == z)       // Returns false 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>They are commonly used in conditional testing.</p>
+        <br>
+        <h2>JavaScript Arrays</h2>
+        <p>Arrays are defined using square brackets, with items separated by commas.</p>
+        <p>For example, the code below creates an array called cars containing three car names.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+const cars = ["Saab", "Volvo", "BMW"];
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>Remember, array indexes start at 0, so the first item is at index [0], the second at [1], and so on.</p>
+        <br>
+        <h2>JavaScript Objects</h2>
+        <p>Objects are created using curly braces {}.</p>
+        <p>Their properties are specified as key-value pairs, separated by commas.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>For instance, a person object might have properties such as firstName, lastName, age, and eyeColor.</p>
+        <br>
+        <h2>The typeof Operator</h2>
+        <p>The typeof operator allows you to determine the type of a JavaScript variable or expression.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof "John Doe"     // Returns "string" 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+typeof 0              // Returns "number"
+typeof 314            // Returns "number"
+typeof 3.14           // Returns "number"
+typeof (3)            // Returns "number"
+typeof (3 + 4)        // Returns "number" 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Undefined</h2>
+        <p>In JavaScript, if a variable is declared without an assigned value, it defaults to undefined, and its type is undefined as well.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+ let car;    // Value is undefined, type is undefined 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <p>You can clear any variable by setting its value to undefined, which also resets its type.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+car = undefined;    // Value is undefined, type is undefined 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+        <br>
+        <h2>Empty Values</h2>
+        <p>An empty value is different from undefined. For example, an empty string has a defined value and type, even though it contains no characters.</p>
+        <div class="example">
+          <h3>Example</h3>
+          <div class="code-area">
+            <pre id="exampleCode">
+ let car = "";    // The value is "", the typeof is "string" 
+            </pre>
+            <button onclick="copyCode()"><i class="fas fa-copy"></i><span>Copy</span></button>
+          </div>  
+          <a href="#" class="btn-try-it">Try it Yourself<i class="fas fa-code"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
